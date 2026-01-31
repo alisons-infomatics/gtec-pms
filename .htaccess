@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Skip if the request already points to the public folder
+RewriteCond %{REQUEST_URI} !^/public/
+
+# Rewrite all other requests to the public folder
+RewriteRule ^(.*)$ public/$1 [L]
